@@ -3,6 +3,8 @@
 ## Course Information
 INFO 3305 – Web Application Development
 
+---
+
 ## Group Information
 **Group 4**
 
@@ -18,27 +20,32 @@ Dr. Nor Azura Binti Kamarulzaman
 
 ## Project Description
 NovaSky Hotel Reservation System is a web-based hotel booking application developed using the Laravel framework.  
-The system allows users to register, log in, browse hotel rooms, make reservations, and contact the hotel through an online interface.  
+The system is designed to allow users to register, log in, browse hotel rooms, make reservations, and contact the hotel through an online interface.
 
-An admin dashboard is included to help administrators monitor bookings and view customer messages efficiently.  
-This project demonstrates the implementation of a full-stack MVC web application for the INFO 3305 course.
+The system also provides an admin dashboard that enables administrators to monitor bookings, manage rooms, manage gallery images, and view customer messages efficiently.
+
+This project was developed as part of the INFO 3305 course to demonstrate full-stack web application development using the MVC architecture.
 
 ---
 
 ## System Features
 
 ### User Features
-- User registration and login using secure authentication (Laravel Jetstream + Fortify)
-- Browse available rooms via Our Rooms page
+- User registration and login using secure authentication
+- Browse available rooms through the **Our Rooms** page
+- View room details
 - Room booking with validation:
   - All booking form fields are required
   - If the selected date is already booked, an alert popup will prompt the user to choose a different date
-- Contact Us form for users to send messages/inquiries to the hotel
+- Contact Us form for users to send messages or inquiries
 
 ### Admin Features
 - Admin dashboard overview
-- View total number of bookings, rooms, and users
-- View latest reservations
+- View total number of bookings, rooms, and registered users
+- View and manage room reservations
+- Approve or reject bookings
+- Add, update, and delete rooms
+- Manage gallery images
 - View messages submitted through the Contact Us form
 - Role-based access control using `is_admin`
 
@@ -52,15 +59,17 @@ This project demonstrates the implementation of a full-stack MVC web application
 - Laravel Jetstream (Authentication)
 - Laravel Fortify
 - Tailwind CSS
+- Bootstrap
 - Vite
 - Git & GitHub
+- XAMPP
 
 ---
 
 ## Authentication & Authorization
-The system uses Laravel Jetstream with Fortify for user authentication.  
-Users must be logged in before making reservations.  
-Admin authorization is implemented using an `is_admin` attribute in the `users` table to restrict access to admin-only pages.
+This system uses Laravel Jetstream with Fortify to handle user authentication, including registration and login functionality.
+
+Authorization is implemented using an `is_admin` attribute in the `users` table, ensuring that only administrators can access the admin dashboard and perform management operations.
 
 ---
 
@@ -79,13 +88,13 @@ Admin authorization is implemented using an `is_admin` attribute in the `users` 
 - `users` (includes `is_admin`)
 - `rooms`
 - `bookings`
-- `contacts` (customer messages)
+- `contacts` (or messages table)
+- `galleries`
 
 ---
 
 ## How to Run the Project Locally
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/m7lutfee/NOVASKY_BOOKING_RESERVATION.git
-   cd NOVASKY_BOOKING_RESERVATION
+### 1. Clone the repository
+```bash
+git clone https://github.com/m7lutfee/novasky-hotel-reservation-system.git
