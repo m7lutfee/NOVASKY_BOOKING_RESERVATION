@@ -27,6 +27,20 @@ The system also provides an admin dashboard that enables administrators to monit
 This project was developed as part of the INFO 3305 course to demonstrate full-stack web application development using the MVC architecture.
 
 ---
+### Project Objectives
+
+- To develop a Laravel-based hotel reservation system using MVC architecture
+- To implement user authentication and role-based access control
+- To apply CRUD operations for managing rooms, bookings, and gallery content
+
+### MVC Implementation
+
+- Model: User, Room, Booking, Contact, Gallery
+- View: Blade templates in resources/views
+- Controller: HomeController, AdminController
+
+
+---
 
 ## System Features
 
@@ -97,4 +111,7 @@ Authorization is implemented using an `is_admin` attribute in the `users` table,
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/m7lutfee/novasky-hotel-reservation-system.git
+git clone https://github.com/m7lutfee/NOVASKY_BOOKING_RESERVATION.git
+
+
+
