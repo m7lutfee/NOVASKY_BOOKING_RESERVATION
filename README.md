@@ -1,59 +1,91 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# NovaSky Hotel Reservation System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Course Information
+INFO 3305 – Web Application Development
 
-## About Laravel
+## Group Information
+**Group 4**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Group Members
+- Muhammad Ammar Raziq Bin Abdul Razak (2311619)
+- Muhammad Aidid Danial bin Kamaruddin (2315241)
+- Muhammadlutfi Luebaesa (2210835)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Instructor:**  
+Dr. Nor Azura Binti Kamarulzaman
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## Project Description
+NovaSky Hotel Reservation System is a web-based hotel booking application developed using the Laravel framework.  
+The system allows users to register, log in, browse hotel rooms, make reservations, and contact the hotel through an online interface.  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+An admin dashboard is included to help administrators monitor bookings and view customer messages efficiently.  
+This project demonstrates the implementation of a full-stack MVC web application for the INFO 3305 course.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## System Features
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### User Features
+- User registration and login using secure authentication (Laravel Jetstream + Fortify)
+- Browse available rooms via Our Rooms page
+- Room booking with validation:
+  - All booking form fields are required
+  - If the selected date is already booked, an alert popup will prompt the user to choose a different date
+- Contact Us form for users to send messages/inquiries to the hotel
 
-### Premium Partners
+### Admin Features
+- Admin dashboard overview
+- View total number of bookings, rooms, and users
+- View latest reservations
+- View messages submitted through the Contact Us form
+- Role-based access control using `is_admin`
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## Technologies Used
+- Laravel Framework
+- PHP
+- MySQL
+- Blade Template Engine
+- Laravel Jetstream (Authentication)
+- Laravel Fortify
+- Tailwind CSS
+- Vite
+- Git & GitHub
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## Authentication & Authorization
+The system uses Laravel Jetstream with Fortify for user authentication.  
+Users must be logged in before making reservations.  
+Admin authorization is implemented using an `is_admin` attribute in the `users` table to restrict access to admin-only pages.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## Project Structure
+- Routes: `routes/web.php`
+- Controllers: `app/Http/Controllers`
+- Models: `app/Models`
+- Views: `resources/views`
+- Middleware: `app/Http/Middleware`
+- Database Migrations: `database/migrations`
+- Public Assets: `public/`
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## Database Tables
+- `users` (includes `is_admin`)
+- `rooms`
+- `bookings`
+- `contacts` (customer messages)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## How to Run the Project Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/m7lutfee/NOVASKY_BOOKING_RESERVATION.git
+   cd NOVASKY_BOOKING_RESERVATION
