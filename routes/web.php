@@ -8,11 +8,11 @@ route::get('/', [AdminController::class,'home']);
 
 route::get('/home', [AdminController::class, 'index'])->name('home');
 
-route::get('/create_room', [AdminController::class,'create_rom']);
+route::get('/create_room', [AdminController::class,'create_room']);
 
-route::post('/add_room', [AdminController::class,'add_rom']);
+route::post('/add_room', [AdminController::class,'add_room']);
 
-route::get('/view_room', [AdminController::class,'view_rom']);
+route::get('/view_room', [AdminController::class,'view_room']);
 
 route::get('/room_delete/{id}', [AdminController::class,'room_delete']);
 
@@ -32,5 +32,14 @@ route::get('/approve_book/{id}', [AdminController::class,'approve_book']);
 
 route::get('/reject_book/{id}', [AdminController::class,'reject_book']);
 
+route::get('/view_gallary', [AdminController::class,'view_gallary']);
+
+route::post('/upload_gallary', [AdminController::class,'upload_gallary']);
+
+route::get('/delete_gallary/{id}', [AdminController::class,'delete_gallary']);
+
+route::post('/contact', [HomeController::class,'contact']);
+
+route::get('/all_messages', [AdminController::class,'all_messages']);
 
 

@@ -7,6 +7,8 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Room;
 use App\Models\Booking;
+use App\Models\Gallary;
+use App\Models\Contact;
 
 
 class AdminController extends Controller
@@ -21,7 +23,9 @@ class AdminController extends Controller
                     {
                         $room = Room::all();
 
-                        return view('home.index', compact('room'));
+                        $gallary = Gallary::all();
+
+                        return view('home.index', compact('room', 'gallary'));
                     }
 
                 else if($usertype =='admin')
@@ -43,15 +47,18 @@ class AdminController extends Controller
     public function home()
     {
         $room = Room::all();
-        return view('home.index', compact('room'));
+
+        $gallary = Gallary::all();
+
+        return view('home.index', compact('room', 'gallary'));
     }
 
-    public function create_rom()
+    public function create_room()
     {
         return view('admin.create_room');
     }
 
-    public function add_rom(Request $request)
+    public function add_room(Request $request)
     {
         $data = new Room();
 
@@ -74,7 +81,7 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    public function view_rom()
+    public function view_room()
     {
         $data = Room::all();
         return view('admin.view_room', compact('data'));
@@ -163,7 +170,69 @@ class AdminController extends Controller
         return redirect()->back();
 
     }
+
+    public function view_gallary()
+    {
+        $gallary = Gallary::all();
+
+        return view('admin.gallary', compact('gallary'));
+
+    }
+
+    public function upload_gallary(Request $request)
+    {
+        $data = new Gallary;
+
+        $image = $request->image;
+
+        if($image)
+        {
+            $imagename=time().'.'.$image->getClientOriginalExtension();
+
+            $request->image->move('gallary',$imagename);
+
+            $data->image = $imagename;
+
+            $data->save();
+
+            return redirect()->back();
+        }
+
+        
+
+    }
     
+
+    public function delete_gallary($id)
+    {
+
+    $data = Gallary::find($id);
+
+    $data->delete();
+    
+    return redirect()->back();
+
+    }
+
+
+
+    public function all_messages()
+    {
+
+    $data= Contact::all();
+
+    return view('admin.all_messages', compact('data'));
+
+
+    }
+
+
+
+
+
+
+
+
 
 
 }

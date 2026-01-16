@@ -5,9 +5,10 @@
                   <div class=" col-md-4">
                      <h3>Contact US</h3>
                      <ul class="conta">
-                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> Address</li>
-                        <li><i class="fa fa-mobile" aria-hidden="true"></i> +01 1234569540</li>
-                        <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> demo@gmail.com</a></li>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> NovaSky Hotel
+                        Kuala Lumpur, Malaysia</li>
+                        <li><i class="fa fa-mobile" aria-hidden="true"></i>  +60 3-1234 5678</li>
+                        <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> NovaSkyHotel@gmail.com</a></li>
                      </ul>
                   </div>
                   <div class="col-md-4">
@@ -42,7 +43,7 @@
                      <div class="col-md-10 offset-md-1">
                         
                         <p>
-                        © 2019 All Rights Reserved. Design by <a href="https://html.design/"> Free Html Templates</a>
+                        © 2026 NovaSky Hotel. All Rights Reserved.<a href="https://html.design/"></a>
                         <br><br>
                         Distributed by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
                         </p>
